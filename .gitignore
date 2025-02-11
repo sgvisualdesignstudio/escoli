@@ -1,0 +1,10 @@
+# Ignorar archivos CSS compilados
+assets/css/*.css
+assets/css/*.map
+
+# Ignorar dependencias
+node_modules/
+
+# Ignorar archivos temporales
+*.log
+.DS_Store

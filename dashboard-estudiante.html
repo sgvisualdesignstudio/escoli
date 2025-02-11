@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard del Estudiante</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .sidebar {
+      height: 100vh;
+      position: fixed;
+      width: 250px;
+      background-color: #343a40;
+      color: #fff;
+    }
+    .sidebar a {
+      color: #adb5bd;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+    }
+    .sidebar a:hover {
+      background-color: #495057;
+      color: #fff;
+    }
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+    }
+    .welcome-msg {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .card-custom {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3 class="text-center py-3">Escoli</h3>
+    <a href="#">📚 Mis Cursos</a>
+    <a href="#">📈 Progreso</a>
+    <a href="#">📝 Evaluaciones</a>
+    <a href="#">👤 Mi Perfil</a>
+    <a href="#">📩 Notificaciones</a>
+    <a href="#">⚙ Configuración</a>
+    <a href="#">❓ Ayuda</a>
+    <a href="#">🔓 Cerrar Sesión</a>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- Encabezado -->
+    <div class="welcome-msg">
+      ¡Hola, [Nombre del Estudiante]! 👋 Bienvenido a tu Dashboard.
+    </div>
+
+    <!-- Tarjetas principales -->
+    <div class="row g-4">
+      <!-- Curso en progreso -->
+      <div class="col-md-4">
+        <div class="card card-custom">
+          <div class="card-body">
+            <h5 class="card-title">Curso en Progreso</h5>
+            <p class="card-text">Eneagrama Avanzado</p>
+            <p class="text-muted">Progreso: 60%</p>
+            <a href="#" class="btn btn-primary">Continuar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Evaluaciones pendientes -->
+      <div class="col-md-4">
+        <div class="card card-custom">
+          <div class="card-body">
+            <h5 class="card-title">Evaluaciones Pendientes</h5>
+            <p class="card-text">1 evaluación por completar.</p>
+            <a href="#" class="btn btn-warning">Ir a Evaluaciones</a>
+          </div>
+        </div>
+      </div>
+      <!-- Notificaciones -->
+      <div class="col-md-4">
+        <div class="card card-custom">
+          <div class="card-body">
+            <h5 class="card-title">Notificaciones</h5>
+            <p class="card-text">3 nuevas notificaciones.</p>
+            <a href="#" class="btn btn-info">Ver Notificaciones</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla de cursos -->
+    <div class="mt-5">
+      <h4>Mis Cursos</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Curso</th>
+            <th>Progreso</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Inteligencia Emocional</td>
+            <td>80%</td>
+            <td><a href="#" class="btn btn-sm btn-primary">Continuar</a></td>
+          </tr>
+          <tr>
+            <td>Coach Ontológico</td>
+            <td>50%</td>
+            <td><a href="#" class="btn btn-sm btn-primary">Continuar</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

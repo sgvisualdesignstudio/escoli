@@ -1,0 +1,61 @@
+@use '../utilities/grid-system' as gridmix;
+
+.container{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include gridmix.grid-system('all');
+
+}
+
+//tablets
+
+@media (min-width: 0px) {
+    .row{
+        @include gridmix.grid-system('xs');
+    }
+}
+
+@media (min-width: 576px) {
+    .row{
+        @include gridmix.grid-system('sm');
+    }
+}
+
+
+@media (min-width: 768px) {
+    .row{
+        @include gridmix.grid-system('md');
+    }
+}
+
+@media (min-width: 992px) {
+    .row{
+        @include gridmix.grid-system('lg');
+    }
+    
+    }
+    
+    
+    @media (min-width: 1200px) {
+        .row{
+            @include gridmix.grid-system('xl');
+        }
+        
+    }
+
+
+    @media (min-width: 1400px) {
+        .row{
+            @include gridmix.grid-system('xxl');
+        }
+        
+    }

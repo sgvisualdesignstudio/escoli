@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Instructor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="text-center mb-4">Registro como Instructor</h2>
+            
+            <!-- Formulario de Registro -->
+            <form id="instructorForm">
+              <div class="mb-3">
+                <label for="instructorName" class="form-label">Nombre completo *</label>
+                <input type="text" class="form-control" id="instructorName" placeholder="Escribe tu nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="instructorEmail" class="form-label">E-mail *</label>
+                <input type="email" class="form-control" id="instructorEmail" placeholder="ejemplo@correo.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="instructorPassword" class="form-label">Contraseña *</label>
+                <input type="password" class="form-control" id="instructorPassword" placeholder="******" required>
+              </div>
+
+              <!-- Campo para Especialidades -->
+              <div class="mb-3">
+                <label for="specialty" class="form-label">Área de conocimiento o especialidad</label>
+                <div id="specialtiesContainer">
+                  <div class="input-group mb-2">
+                    <select class="form-select" name="specialties[]" required>
+                      <option value="Eneagrama">Eneagrama</option>
+                      <option value="Desarrollo Web">Desarrollo Web</option>
+                      <option value="Matemáticas">Matemáticas</option>
+                      <option value="Idiomas">Idiomas</option>
+                    </select>
+                    <button type="button" class="btn btn-outline-primary" id="addSpecialtyBtn">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="termsCheckbox" required>
+                <label class="form-check-label" for="termsCheckbox">
+                  Al registrarte, aceptas nuestras Condiciones de uso y nuestra Política de privacidad.
+                </label>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-success">Registrarte</button>
+              </div>
+              <div class="text-center mt-3">
+                <a href="#" class="text-decoration-none">¿Ya tienes una cuenta? Iniciar sesión</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Funcionalidad para añadir especialidades
+    document.getElementById("addSpecialtyBtn").addEventListener("click", function() {
+      const specialtiesContainer = document.getElementById("specialtiesContainer");
+
+      const specialtyInputGroup = document.createElement("div");
+      specialtyInputGroup.classList.add("input-group", "mb-2");
+
+      const specialtySelect = document.createElement("select");
+      specialtySelect.classList.add("form-select");
+      specialtySelect.name = "specialties[]";
+      specialtySelect.required = true;
+      specialtySelect.innerHTML = `
+        <option value="Eneagrama">Eneagrama</option>
+        <option value="Desarrollo Web">Desarrollo Web</option>
+        <option value="Matemáticas">Matemáticas</option>
+        <option value="Idiomas">Idiomas</option>
+      `;
+
+      const removeBtn = document.createElement("button");
+      removeBtn.type = "button";
+      removeBtn.classList.add("btn", "btn-outline-danger");
+      removeBtn.textContent = "−";
+      removeBtn.addEventListener("click", function() {
+        specialtiesContainer.removeChild(specialtyInputGroup);
+      });
+
+      specialtyInputGroup.appendChild(specialtySelect);
+      specialtyInputGroup.appendChild(removeBtn);
+
+      specialtiesContainer.appendChild(specialtyInputGroup);
+    });
+  </script>
+</body>
+</html>
