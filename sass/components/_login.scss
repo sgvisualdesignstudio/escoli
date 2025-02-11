@@ -1,0 +1,32 @@
+.card-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__logo{
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    .card{
+        width: 655px;
+        border: none;
+        background-color: #E74436;
+
+        .btn{
+            background-color: white;
+        }
+    }
+}
+
+.btn-white{
+    background-color: white;
+    color: #E74436;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+}
