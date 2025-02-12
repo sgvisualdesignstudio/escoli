@@ -11867,8 +11867,39 @@ textarea.form-control-lg {
   border: none;
   background-color: #E74436;
 }
-.card-login .card .btn {
-  background-color: white;
+.card-login .card-body {
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.card-login .card-body .nav-tabs {
+  --bs-nav-tabs-border-radius: none;
+}
+.card-login .card-body ul {
+  display: flex;
+  justify-content: space-around;
+}
+.card-login .card-body ul li {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.card-login .card-body ul li button {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 40px;
+  width: 100%;
+}
+.card-login .card-body ul li .active {
+  width: 100%;
+  color: #E74436;
+}
+.card-login .card h2 {
+  color: white;
 }
 
 .btn-white {

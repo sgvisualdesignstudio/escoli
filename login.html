@@ -11,24 +11,45 @@
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-5 d-flex flex-column ">
         <div class="card-login">
-          <img class="card-login__logo" class="mb-5" src="img/logo-log-in.svg" alt="">
+          <img class="card-login__logo"  src="img/logo-log-in.svg" alt="">
         <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <h2 class="text-center mb-4">Iniciar Sesión</h2>
-
+          <div class="card-body">
+           
             <!-- Pestañas para Estudiante e Instructor -->
-            <ul class="nav nav-tabs mb-3" id="loginTabs" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="student-tab" data-bs-toggle="tab" data-bs-target="#student" type="button" role="tab">Estudiante</button>
-              </li>
+            <ul class="nav nav-tabs" id="loginTabs" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="instructor-tab" data-bs-toggle="tab" data-bs-target="#instructor" type="button" role="tab">Instructor</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="student-tab" data-bs-toggle="tab" data-bs-target="#student" type="button" role="tab">Estudiante</button>
               </li>
             </ul>
 
             <!-- Contenido de las pestañas -->
             <div class="tab-content" id="loginTabsContent">
+
+               <!-- Formulario para Instructores -->
+               <div class="tab-pane fade" id="instructor" role="tabpanel">
+                <form>
+                  <div class="mb-3">
+                    <label for="instructorEmail" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="instructorEmail" placeholder="ejemplo@correo.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="instructorPassword" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="instructorPassword" required>
+                  </div>
+                  <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                  </div>
+                  <div class="text-center">
+                    <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+                  </div>
+                </form>
+              </div>
+
               <!-- Formulario para Estudiantes -->
+              <h2 class="text-center mb-4">Iniciar Sesión como estudiante</h2>
               <div class="tab-pane fade show active" id="student" role="tabpanel">
                 <form>
                   <div class="mb-3">
@@ -48,25 +69,7 @@
                 </form>
               </div>
 
-              <!-- Formulario para Instructores -->
-              <div class="tab-pane fade" id="instructor" role="tabpanel">
-                <form>
-                  <div class="mb-3">
-                    <label for="instructorEmail" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="instructorEmail" placeholder="ejemplo@correo.com" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="instructorPassword" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="instructorPassword" required>
-                  </div>
-                  <div class="d-grid mb-3">
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                  </div>
-                  <div class="text-center">
-                    <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
-                  </div>
-                </form>
-              </div>
+             
             </div>
 
           </div>
