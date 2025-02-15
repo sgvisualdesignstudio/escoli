@@ -1,3 +1,6 @@
+@import '../global/colors';
+
+
 .card-login {
     display: flex;
     flex-direction: column;
@@ -103,6 +106,31 @@
                     height: 74px;
                 }
             }
+
+            .recover-pass{
+                max-width: 570px;
+                width: 100%;
+                margin: 0 auto;
+                &__text{
+                    text-align: center;
+                    p{
+                        color: white;
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin: 0px;
+                    }
+                    a{
+                        color: white;
+                    }
+                    
+                }
+
+                span{
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: white;
+                }
+            }
         }
 
         h2 {
@@ -113,7 +141,7 @@
 
 // Botón de inicio de sesión blanco
 .btn-white {
-    background-color: white;
+    background-color: $blanco;
     color: #E74436;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
@@ -121,5 +149,69 @@
     text-align: center;
     margin: 0 auto;
     width: 245px;
-    height: 63px;
+    height: 63px;;
 }
+
+.btn-white:hover {
+    background-color: $blanco;
+    color: #E74436;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    width: 245px;
+    height: 63px;;
+}
+
+.btn-white:active {
+    background-color: $blanco;
+    color: #E74436;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    width: 245px;
+    height: 63px;;
+}
+
+
+
+.btn-white-line {
+    display: block;
+    color: $blanco;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid;
+    height: fit-content;
+    color: beige;
+    
+}
+
+
+.btn-white-line:hover {
+    display: block;
+    color: $blanco;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid;
+    height: fit-content;
+    color: beige;
+    
+}
+
+
+
+.btn-white-line:active {
+    display: block;
+    color: $blanco;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid;
+    height: fit-content;
+    color: beige;
+    
+}
+
+

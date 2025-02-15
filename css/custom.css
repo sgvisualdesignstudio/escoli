@@ -11939,12 +11939,34 @@ textarea.form-control-lg {
 .card-login .card-body form input {
   height: 74px;
 }
+.card-login .card-body .recover-pass {
+  max-width: 570px;
+  width: 100%;
+  margin: 0 auto;
+}
+.card-login .card-body .recover-pass__text {
+  text-align: center;
+}
+.card-login .card-body .recover-pass__text p {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0px;
+}
+.card-login .card-body .recover-pass__text a {
+  color: white;
+}
+.card-login .card-body .recover-pass span {
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+}
 .card-login .card h2 {
   color: white;
 }
 
 .btn-white {
-  background-color: white;
+  background-color: #fff;
   color: #E74436;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
@@ -11953,6 +11975,60 @@ textarea.form-control-lg {
   margin: 0 auto;
   width: 245px;
   height: 63px;
+}
+
+.btn-white:hover {
+  background-color: #fff;
+  color: #E74436;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  width: 245px;
+  height: 63px;
+}
+
+.btn-white:active {
+  background-color: #fff;
+  color: #E74436;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  width: 245px;
+  height: 63px;
+}
+
+.btn-white-line {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border: 2px solid;
+  height: fit-content;
+  color: beige;
+}
+
+.btn-white-line:hover {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border: 2px solid;
+  height: fit-content;
+  color: beige;
+}
+
+.btn-white-line:active {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border: 2px solid;
+  height: fit-content;
+  color: beige;
 }
 
 /*# sourceMappingURL=custom.css.map */
