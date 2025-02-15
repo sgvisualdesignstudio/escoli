@@ -11859,8 +11859,7 @@ textarea.form-control-lg {
 .card-login__logo {
   width: 100%;
   max-width: 300px;
-  margin: 0 auto;
-  margin-bottom: 100px;
+  margin: 0 auto 100px;
 }
 .card-login .card {
   width: 655px;
@@ -11868,35 +11867,77 @@ textarea.form-control-lg {
   background-color: #E74436;
 }
 .card-login .card-body {
-  padding-top: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding: 0;
 }
-.card-login .card-body .nav-tabs {
-  --bs-nav-tabs-border-radius: none;
-}
-.card-login .card-body ul {
+.card-login .card-body ul.nav-tabs {
   display: flex;
   justify-content: space-around;
+  border-bottom: none;
 }
-.card-login .card-body ul li {
-  display: flex;
+.card-login .card-body ul.nav-tabs li {
   width: 50%;
+  text-align: center;
+  position: relative;
+}
+.card-login .card-body ul.nav-tabs li button {
+  display: flex;
   align-items: center;
   justify-content: center;
-}
-.card-login .card-body ul li button {
-  color: white;
+  gap: 1rem;
+  color: #E74436;
   font-size: 24px;
   font-weight: 400;
-  padding-top: 35px;
-  padding-bottom: 35px;
-  padding-left: 40px;
+  padding: 12px 0;
   width: 100%;
+  border: none;
+  background: white;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
 }
-.card-login .card-body ul li .active {
+.card-login .card-body ul.nav-tabs li button span {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+.card-login .card-body ul.nav-tabs li button span .typeuser-icon {
+  fill: #E74436;
+}
+.card-login .card-body ul.nav-tabs li .active {
+  background-color: #E74436;
+  color: white;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.card-login .card-body ul.nav-tabs li .active .typeuser-icon {
+  fill: white;
+}
+.card-login .card-body ul.nav-tabs li .active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+}
+.card-login .card-body ul.nav-tabs li .active.right::before {
+  left: auto;
+  right: -12px;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+.card-login .card-body form {
+  max-width: 551px;
   width: 100%;
-  color: #E74436;
+  margin: 0 auto;
+}
+.card-login .card-body form label {
+  color: white;
+  font-weight: 500;
+}
+.card-login .card-body form input {
+  height: 74px;
 }
 .card-login .card h2 {
   color: white;
@@ -11910,10 +11951,8 @@ textarea.form-control-lg {
   width: fit-content;
   text-align: center;
   margin: 0 auto;
-}
-
-.bg-purple-light {
-  background-color: #F2F0FE;
+  width: 245px;
+  height: 63px;
 }
 
 /*# sourceMappingURL=custom.css.map */

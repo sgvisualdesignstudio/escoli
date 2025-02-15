@@ -1,70 +1,118 @@
-.card-login{
+.card-login {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
-    &__logo{
+    &__logo {
         width: 100%;
         max-width: 300px;
-        margin: 0 auto;
-        margin-bottom: 100px;
+        margin: 0 auto 100px;
     }
 
-    .card{
+    .card {
         width: 655px;
         border: none;
         background-color: #E74436;
 
-        &-body{
-            padding-top: 0px;
-            padding-left: 0px;
-            padding-right: 0px;
+        &-body {
+            padding: 0;
 
-            .nav-tabs{
-                --bs-nav-tabs-border-radius: none;
-            }
-
-            ul{
+            ul.nav-tabs {
                 display: flex;
                 justify-content: space-around;
+                border-bottom: none;
 
-                li{
-                    display: flex;
+                li {
                     width: 50%;
-                    align-items: center;
-                        justify-content: center;
-                       
+                    text-align: center;
+                    position: relative;
 
-                        button{
-                            
-                            color: white;
-                            font-size: 24px;
-                            font-weight: 400;
-                            padding-top: 35px;
-                            padding-bottom: 35px;
-                            padding-left: 40px;
-                            width: 100%;
-                        }   
-                    
-                        .active{
-                            width: 100%;
-                            
-                            color: #E74436;
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1rem;
+                        color: #E74436;
+
+                        font-size: 24px;
+                        font-weight: 400;
+                        padding: 12px 0;
+                        width: 100%;
+                        border: none;
+                        background: white;
+                        transition: all 0.3s ease-in-out;
+                        border-radius: 0;
+                        position: relative;
+                        z-index: 1;
+
+                        span {
+                            display: block;
+                            width: 60px;
+                            height: 60px;
+
+                            .typeuser-icon{
+                                fill: #E74436;
+                            }
                         }
-                        
-                    
+                    }
+
+                    .active {
+                        background-color: #E74436;
+                        color: white;
+                        border-radius: 12px 12px 0 0; // Bordes redondeados superiores
+                       
+                        position: relative;
+                        overflow: hidden;
+
+                        .typeuser-icon {
+                            fill: white;
+                        }
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: -12px; // Ajuste para la pestaña izquierda
+                            width: 24px;
+                            height: 24px;
+                          
+                            
+                        }
+
+                        &.right::before {
+                            left: auto;
+                            right: -12px; // Ajuste para la pestaña derecha
+                            clip-path: polygon(0 0, 100% 100%, 0 100%);
+                        }
+                    }
+                }
+            }
+
+            form{
+                max-width: 551px;
+                width: 100%;
+                margin: 0 auto;
+
+                label{
+                    color: white;
+                    font-weight: 500;
+                }
+
+                input{
+                    height: 74px;
                 }
             }
         }
 
-        h2{
+        h2 {
             color: white;
         }
     }
 }
 
-.btn-white{
+// Botón de inicio de sesión blanco
+.btn-white {
     background-color: white;
     color: #E74436;
     font-weight: 700;
@@ -72,4 +120,6 @@
     width: fit-content;
     text-align: center;
     margin: 0 auto;
+    width: 245px;
+    height: 63px;
 }
