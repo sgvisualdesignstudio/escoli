@@ -1,1 +1,28 @@
+
+///////////////////////////
+/// 1. Patrones de colores
+///////////////////////////
+
+$rojo-escoli: #E74436;
+
+///////////////////////////
+/// 2. Modificando variables de bootstrap
+///////////////////////////
+
+
+$primary: $rojo-escoli;
+$enable-shadows:true;
+$enable-gradients:true;
+
+$btn-padding-y: .8rem;
+$btn-padding-x: 1.5rem;
+
+
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+
+
 @import "../../node_modules/bootstrap/scss/bootstrap";

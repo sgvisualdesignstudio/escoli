@@ -1,4 +1,4 @@
-@import '../global/colors';
+@use '../global/colors';
 
 
 .card-login {
@@ -128,7 +128,7 @@
                 span{
                     font-weight: 700;
                     font-size: 24px;
-                    color: white;
+                    color: colors.$blanco;
                 }
             }
         }
@@ -141,7 +141,7 @@
 
 // Botón de inicio de sesión blanco
 .btn-white {
-    background-color: $blanco;
+    background-color: colors.$blanco;
     color: #E74436;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
@@ -153,7 +153,7 @@
 }
 
 .btn-white:hover {
-    background-color: $blanco;
+    background-color: white;
     color: #E74436;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
@@ -165,7 +165,7 @@
 }
 
 .btn-white:active {
-    background-color: $blanco;
+    background-color: colors.$blanco;
     color: #E74436;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
@@ -180,19 +180,19 @@
 
 .btn-white-line {
     display: block;
-    color: $blanco;
+    color: colors.$blanco;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
     border: 2px solid;
     height: fit-content;
-    color: beige;
+    color: colors.$blanco;
     
 }
 
 
 .btn-white-line:hover {
     display: block;
-    color: $blanco;
+    color: colors.$blanco;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
     border: 2px solid;
@@ -205,7 +205,7 @@
 
 .btn-white-line:active {
     display: block;
-    color: $blanco;
+    color: colors.$blanco;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
     border: 2px solid;
@@ -213,5 +213,6 @@
     color: beige;
     
 }
+
 
 
