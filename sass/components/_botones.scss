@@ -1,0 +1,80 @@
+@use '../global/colors';
+
+
+// Botón de inicio de sesión blanco
+.btn-white {
+    background-color: colors.$blanco;
+    color: #E74436;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    width: 245px;
+    height: 63px;;
+}
+
+.btn-white:hover {
+    background-color: white;
+    color: #E74436;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    width: 245px;
+    height: 63px;;
+}
+
+.btn-white:active {
+    background-color: colors.$blanco;
+    color: #E74436;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    width: 245px;
+    height: 63px;;
+}
+
+
+
+.btn-white-line {
+    display: block;
+    color: colors.$blanco;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid;
+    height: fit-content;
+    color: colors.$blanco;
+    
+}
+
+
+.btn-white-line:hover {
+    display: block;
+    color: colors.$blanco;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid;
+    height: fit-content;
+    color: beige;
+    
+}
+
+
+
+.btn-white-line:active {
+    display: block;
+    color: colors.$blanco;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid;
+    height: fit-content;
+    color: beige;
+    
+}
+
+
+

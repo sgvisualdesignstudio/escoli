@@ -1,7 +1,15 @@
 @use '../global/colors';
+@use '../global/inputs';
+
+// Definir colores en variables de Bootstrap
+$custom-checkbox-bg: white;
+$custom-checkbox-border: #ccc;
+$custom-checkbox-checked-bg: #E74436; // Color cuando está marcado
+$custom-checkbox-checked-border: #E74436;
+$custom-checkbox-checkmark: white; // Color del check
 
 
-.card-login {
+.card-register {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,7 +112,17 @@
 
                 input{
                     height: 50px;
+
+                    
                 }
+
+                .form-check-input{
+                    height: 20px;
+                    width: 20px;
+                }
+
+             // Aplicar estilos al checkbox
+                   
             }
 
             .recover-pass{

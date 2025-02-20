@@ -8,8 +8,9 @@
 
 // Aquí empieza el código de tu framework Sass
 @forward 'utilities/bootstrap';
-@forward "global/colors";
 @forward 'components/login';
+@forward 'components/register';
+@forward 'components/botones';
 
 
 
