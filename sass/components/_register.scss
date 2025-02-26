@@ -121,34 +121,10 @@ $custom-checkbox-checkmark: white; // Color del check
                     width: 20px;
                 }
 
-             // Aplicar estilos al checkbox
+               
                    
             }
 
-            .recover-pass{
-                max-width: 570px;
-                width: 100%;
-                margin: 0 auto;
-                &__text{
-                    text-align: center;
-                    p{
-                        color: white;
-                        font-size: 24px;
-                        font-weight: 700;
-                        margin: 0px;
-                    }
-                    a{
-                        color: white;
-                    }
-                    
-                }
-
-                span{
-                    font-weight: 700;
-                    font-size: 24px;
-                    color: white;
-                }
-            }
         }
 
         h2 {

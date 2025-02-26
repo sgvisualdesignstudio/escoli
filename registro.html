@@ -93,15 +93,17 @@
                     <div class="mb-3">
                       <label for="specialty" class="form-label">Área de conocimiento o especialidad</label>
                       <div id="specialtiesContainer">
-                        <div class="input-group mb-2">
+                        <div class="input-group mb-2 ">
                           <select class="form-select" name="specialties[]" required>
                             <option value="Eneagrama">Eneagrama</option>
                             <option value="Desarrollo Web">Desarrollo Web</option>
                             <option value="Matemáticas">Matemáticas</option>
                             <option value="Idiomas">Idiomas</option>
                           </select>
-                          <button type="button" class="btn btn-secondary" id="addSpecialtyBtn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ; msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
+                          <button type="button" class="btn btn-light" id="addSpecialtyBtn">
+                            <svg width="20" height="20" viewBox="0 0 19 21" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M18.5363 8.8362V12.1097H0.463867V8.8362H18.5363ZM11.1842 0.840576V20.7826H7.8341V0.840576H11.1842Z" fill="#E74436"/>
+                              </svg>
                           </button>
                         </div>
                       </div>
@@ -152,11 +154,12 @@
 
       const removeBtn = document.createElement("button");
       removeBtn.type = "button";
-      removeBtn.classList.add("btn", "btn-secondary");
+      removeBtn.classList.add("btn", "btn-light");
       removeBtn.innerHTML =  `
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+     <svg width="20" height="5" viewBox="0 0 19 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.5363 0.836182V4.10968H0.463867V0.836182H18.5363Z" fill="#E74436"/>
 </svg>
+
   `;
       removeBtn.addEventListener("click", function() {
         specialtiesContainer.removeChild(specialtyInputGroup);

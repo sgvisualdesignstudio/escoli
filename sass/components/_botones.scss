@@ -1,5 +1,5 @@
 @use '../global/colors';
-
+@use '../utilities/bootstrap';
 
 // Botón de inicio de sesión blanco
 .btn-white {
@@ -76,5 +76,16 @@
     
 }
 
+.btn-circle{
+    border-radius: 50% !important;
+    height: 43px;
+    width: 43px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
 
-
+    svg{
+        height: 20px;
+        fill: #E74436;
+    }
+}
