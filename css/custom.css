@@ -11904,6 +11904,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  background-color: #f8f9fa;
+}
+
 .card-login {
   display: flex;
   flex-direction: column;
@@ -12108,11 +12112,68 @@ textarea.form-control-lg {
 .card-register .card-body form input {
   height: 50px;
 }
+.card-register .card-body form .inicia-sesion a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  text-decoration: underline !important;
+}
 .card-register .card-body form .form-check-input {
   height: 20px;
   width: 20px;
 }
 .card-register .card h2 {
+  color: white;
+}
+
+.card-recover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-recover__logo {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 100px;
+}
+.card-recover .card {
+  width: 655px;
+  border: none;
+  background-color: #E74436;
+}
+.card-recover .card-body {
+  padding: 0;
+}
+.card-recover .card-body p {
+  color: white;
+}
+.card-recover .card-body form {
+  max-width: 551px;
+  width: 100%;
+  margin: 0 auto;
+}
+.card-recover .card-body form label {
+  color: white;
+  font-weight: 500;
+}
+.card-recover .card-body form input {
+  height: 50px;
+}
+.card-recover .card-body form .form-check-input {
+  height: 20px;
+  width: 20px;
+}
+.card-recover .card-body form .ini-sesion {
+  color: white;
+}
+.card-recover .card-body form .inicia-sesion a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  text-decoration: underline !important;
+}
+.card-recover .card h2 {
   color: white;
 }
 
@@ -12199,6 +12260,54 @@ textarea.form-control-lg {
 .btn-circle svg {
   height: 20px;
   fill: #E74436;
+}
+
+/*Botones menú lateral*/
+.sidebar .user-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 85%;
+}
+.sidebar .user-menu .bton {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  width: 100%;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  gap: 1rem;
+}
+.sidebar .user-menu .bton:hover {
+  background-color: white;
+  color: #E74436;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  max-width: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.content {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+.welcome-msg {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.card-custom {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=custom.css.map */

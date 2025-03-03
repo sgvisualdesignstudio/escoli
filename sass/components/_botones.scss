@@ -89,3 +89,40 @@
         fill: #E74436;
     }
 }
+
+/*Botones menú lateral*/
+
+.sidebar{
+
+    .user-menu{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        width: 85%;
+        
+        .bton{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: .8rem 1rem;
+            width: 100%;
+            border-radius: 4px;
+            text-decoration: none;
+            color: white;
+            gap: 1rem;
+            
+        }
+
+        .bton:hover{
+           background-color: white;
+           color: #E74436; 
+        }
+
+        
+    
+       
+
+    }
+   
+
+}

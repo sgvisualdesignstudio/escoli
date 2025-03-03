@@ -1,0 +1,23 @@
+
+  .sidebar {
+    height: 100vh;
+    position: fixed;
+    max-width: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+ 
+  .content {
+    margin-left: 260px;
+    padding: 20px;
+  }
+  .welcome-msg {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .card-custom {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
