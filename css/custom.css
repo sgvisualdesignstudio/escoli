@@ -12280,11 +12280,18 @@ body {
   color: white;
   gap: 1rem;
 }
+.sidebar .user-menu .bton .user-menu__icon svg path {
+  fill: white;
+}
 .sidebar .user-menu .bton:hover {
   background-color: white;
   color: #E74436;
 }
+.sidebar .user-menu .bton:hover .user-menu__icon svg path {
+  fill: #E74436;
+}
 
+/*registro 02: se estilizan botones de añadir y restar especialidad*/
 .sidebar {
   height: 100vh;
   position: fixed;

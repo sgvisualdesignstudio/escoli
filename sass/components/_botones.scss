@@ -100,29 +100,36 @@
         gap: .5rem;
         width: 85%;
         
-        .bton{
+        .bton {
             display: flex;
             justify-content: start;
             align-items: center;
-            padding: .8rem 1rem;
+            padding: 0.8rem 1rem;
             width: 100%;
             border-radius: 4px;
             text-decoration: none;
             color: white;
             gap: 1rem;
-            
-        }
-
-        .bton:hover{
-           background-color: white;
-           color: #E74436; 
-        }
-
-        
-    
-       
+          
+           
+            .user-menu__icon svg path {
+              fill: white;
+            }
+          
+            &:hover {
+              background-color: white;
+              color: #E74436;
+          
+          
+              .user-menu__icon svg path {
+                fill: #E74436;
+              }
+            }
+          }
 
     }
    
 
 }
+
+/*registro 02: se estilizan botones de añadir y restar especialidad*/
