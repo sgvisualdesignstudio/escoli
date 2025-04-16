@@ -1,0 +1,96 @@
+.progress-circle {
+    width: 110px;
+    height: 110px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        transform: rotate(0deg);
+    }
+
+    circle {
+        fill: none;
+        stroke-width: 10;
+        cx: 60;
+        cy: 60;
+        r: 50;
+        stroke-linecap: round;
+    }
+
+    .bg {
+        stroke: #ddd; // Color de fondo
+    }
+
+    .progress {
+        stroke: #4B0076; // Color del progreso
+        stroke-dasharray: 314; // 2 * π * 50 (circunferencia)
+        stroke-dashoffset: 314; // Oculta el progreso
+        transition: stroke-dashoffset 0.5s ease;
+    }
+
+    .porcentaje {
+        font-size: 20px;
+        fill: #4B0076;
+        font-weight: bold;
+    }
+}
+
+/*Contador de evaluaciones*/
+
+.evaluation-counter {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        circle {
+            fill: none;
+            stroke: #4B0076; // Color del borde
+            stroke-width: 7;
+        }
+    }
+
+    .count {
+        font-size: 24px;
+        font-weight: bold;
+        fill: #4B0076; // Color del número
+    }
+}
+
+/*Notificaciones*/
+
+.notification-bell {
+    position: relative;
+    width:  110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bell-icon {
+        height: 110px;
+        width: 110px;
+    }
+
+    .notification-count {
+        position: absolute;
+    top: 16px;
+    right: 21px;
+    background: #4B0076;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: solid 2px white;
+    }
+}

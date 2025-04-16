@@ -1,0 +1,25 @@
+/*Cards dashboard estudiantes*/
+
+@use '../utilities/bootstrap';
+
+.card-custom{
+    height: 208px;
+    width: 452px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    color: bootstrap.$secondary;
+    align-items: center;
+
+    .card-body{
+        
+    }
+    .card-title{
+        font-size: 2rem;
+    }
+
+    .card-text{
+        font-size: 1.4rem;
+    }
+}

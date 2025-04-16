@@ -7,12 +7,15 @@
  */
 
 // Aquí empieza el código de tu framework Sass
-@forward 'utilities/bootstrap';
-@forward 'components/login';
-@forward 'components/register';
-@forward 'components/recupera-pass';
-@forward 'components/botones';
-@forward 'layout/menu-lateral';
+@use 'utilities/bootstrap';
+@use 'components/login';
+@use 'components/register';
+@use 'components/recupera-pass';
+@use 'components/botones';
+@use 'components/progress';
+@use 'components/card-student'; 
+@use 'components/card-cursos-activos';  
+@use 'layout/menu-lateral';
 
 
 

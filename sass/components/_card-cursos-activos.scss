@@ -1,0 +1,25 @@
+@use '../utilities/bootstrap';
+
+.course-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease;
+  }
+  .course-card:hover {
+    transform: scale(1.02);
+  }
+  .course-img {
+    height: 272px;
+    object-fit: cover;
+  }
+
+  .progress-bar {
+    background-color: bootstrap.$success;
+  }
+
+  .info-progreso {
+    
+  }

@@ -118,11 +118,11 @@
           
             &:hover {
               background-color: white;
-              color: #E74436;
+              color: bootstrap.$rojo-escoli;
           
           
               .user-menu__icon svg path {
-                fill: #E74436;
+                fill: bootstrap.$rojo-escoli;
               }
             }
           }
@@ -130,6 +130,20 @@
     }
    
 
+}
+
+.btn-volver{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bootstrap.$rojo-escoli;
+    color: white;
+    font-weight: 800;
+    
 }
 
 /*registro 02: se estilizan botones de añadir y restar especialidad*/

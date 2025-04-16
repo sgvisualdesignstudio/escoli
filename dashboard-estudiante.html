@@ -10,8 +10,8 @@
 <body>
   <!-- Sidebar -->
   <div class="sidebar bg-primary d-flex flex-column">
-    <h3 class="text-center py-3 mt-3 mb-2">
-      <img src="img/logo-escoli.svg" alt="">
+    <h3 class="text-center py-3 mt-5 mb-3">
+      <img src="img/logo-escoli.svg"  alt="">
     </h3>
     <div class="user-menu">
       <a class="bton bton-light" href="#">
@@ -93,39 +93,57 @@
   <div class="content">
     <!-- Encabezado -->
     <div class="welcome-msg">
-      ¡Hola, [Nombre del Estudiante]! 👋 Bienvenido a tu Dashboard.
+      ¡Hola, [Nombre del Estudiante]!  Bienvenido.
     </div>
 
     <!-- Tarjetas principales -->
-    <div class="row g-4">
+    <div class="row g-4 justify-content-start">
       <!-- Curso en progreso -->
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <div class="card card-custom">
-          <div class="card-body">
+          <div class="card-body d-flex flex-column p-1 justify-content-between h-100">
             <h5 class="card-title">Curso en Progreso</h5>
-            <p class="card-text">Eneagrama Avanzado</p>
-            <p class="text-muted">Progreso: 60%</p>
-            <a href="#" class="btn btn-primary">Continuar</a>
+            <p class="card-text mb-1">Eneagrama Avanzado</p>
+            <a href="#" class="btn btn-primary ">Continuar</a>
+          </div>
+          <div class="progress-circle">
+            <svg width="120" height="120" viewBox="0 0 120 120">
+                <circle class="bg" cx="60" cy="60" r="50"></circle>
+                <circle class="progress" cx="60" cy="60" r="50"></circle>
+                <text x="50%" y="50%" text-anchor="middle" dy=".3em" class="porcentaje">0%</text>
+            </svg>
           </div>
         </div>
       </div>
       <!-- Evaluaciones pendientes -->
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <div class="card card-custom">
-          <div class="card-body">
+          <div class="card-body d-flex flex-column p-1 justify-content-between h-100">
             <h5 class="card-title">Evaluaciones Pendientes</h5>
-            <p class="card-text">1 evaluación por completar.</p>
-            <a href="#" class="btn btn-warning">Ir a Evaluaciones</a>
+            <a href="#" class="btn btn-primary">Ir a evaluaciones</a>
+          </div>
+          <div class="card-custom__contador">
+            <div class="evaluation-counter">
+              <svg width="120" height="120" viewBox="0 0 80 80">
+                  <circle class="bg" cx="40" cy="40" r="35"></circle>
+                  <text x="50%" y="50%" text-anchor="middle" dy=".3em" class="count">1</text>
+              </svg>
+            </div>           
           </div>
         </div>
       </div>
       <!-- Notificaciones -->
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <div class="card card-custom">
-          <div class="card-body">
+          <div class="card-body d-flex flex-column p-1 justify-content-between h-100">
             <h5 class="card-title">Notificaciones</h5>
-            <p class="card-text">3 nuevas notificaciones.</p>
-            <a href="#" class="btn btn-info">Ver Notificaciones</a>
+            <a href="#" class="btn btn-primary">Ver Notificaciones</a>
+          </div>
+          <div class="notification-bell">
+            <svg class="bell-icon" width="40" height="40" viewBox="0 0 24 24">
+                <path d="M12 2C10.3 2 9 3.3 9 5V5.3C6.2 6.2 4.3 8.8 4.3 12V17L3 18.3V19H21V18.3L19.7 17V12C19.7 8.8 17.8 6.2 15 5.3V5C15 3.3 13.7 2 12 2M10 21H14C14 21.6 13.6 22 13 22H11C10.4 22 10 21.6 10 21Z" fill="#4B0076"/>
+            </svg>
+            <span class="notification-count">3</span>
           </div>
         </div>
       </div>
@@ -159,5 +177,42 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    function updateProgress(porcentaje) {
+        const circle = document.querySelector(".progress");
+        const text = document.querySelector(".porcentaje");
+
+        let progress = (314 * (100 - porcentaje)) / 100; // Calcula el offset
+        circle.style.strokeDashoffset = progress; // Aplica el progreso
+        text.textContent = `${porcentaje}%`; // Actualiza el número
+    }
+
+    // Simulación de progreso dinámico
+    let currentProgress = 0;
+    const interval = setInterval(() => {
+        if (currentProgress <= 60) { // Puedes cambiar el porcentaje aquí
+            updateProgress(currentProgress);
+            currentProgress++;
+        } else {
+            clearInterval(interval);
+        }
+    }, 50); // Velocidad de animación
+});
+  
+document.addEventListener("DOMContentLoaded", () => {
+    function updateCounter(count) {
+        document.querySelector(".count").textContent = count;
+    }
+
+    // Simulación de actualización dinámica
+    let pendingEvaluations = 1;
+    setInterval(() => {
+        pendingEvaluations++;
+        if (pendingEvaluations > 9) pendingEvaluations = 1; // Reset después de 9
+        updateCounter(pendingEvaluations);
+    }, 2000); // Cambia cada 2 segundos
+});
+  </script>
 </body>
 </html>
